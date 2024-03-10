@@ -5,9 +5,9 @@ const productSchema = new mongoose.Schema({
   desc: { type: String },
   SKU: { type: String, unique: true, required: true },
   category: { type: mongoose.Schema.Types.ObjectId, ref: 'ProductCategory', required: true },
-  inventory: { type: mongoose.Schema.Types.ObjectId, ref: 'Inventory' }, // Assuming a separate Inventory collection 
+  inventory: { type: mongoose.Schema.Types.ObjectId, ref: 'Inventory' },  
   price: { type: Number, required: true },
-  discount: { type: mongoose.Schema.Types.ObjectId, ref: 'Discount' }, // Assuming a separate Discount collection 
+  discount: { type: mongoose.Schema.Types.ObjectId, ref: 'Discount' }, 
   created_at: { type: Date, default: Date.now },
   modified_at: { type: Date, default: Date.now },
   deleted_at: { type: Date }
